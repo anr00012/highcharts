@@ -357,7 +357,7 @@ namespace RadialAxis {
         TickClass: typeof Tick
     ): (T&typeof AxisComposition) {
 
-        if (pushUnique(composed, compose)) {
+        if (pushUnique(composed, 'Axis.Radial')) {
             addEvent(
                 AxisClass as (T&typeof AxisComposition),
                 'afterInit',
