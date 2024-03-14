@@ -388,6 +388,15 @@ function generateInterfaceComment(
         result += '\n * @todo write doclet';
     }
 
+    result = result.split(/\n/gu).map(l => {
+        l = l.trimEnd();
+        if (l.length > 80) {
+            const br = l.substring(0, 80).lastIndexOf(' ');
+            return l.substring(0, br) + '\n * ' + l.substring(br);
+        }
+        return l;
+    }).join('\n');
+
     return `${result}\n */\n`;
 }
 
@@ -421,6 +430,15 @@ function generatePropertyComment(
     } else {
         result += '\n     * @todo write doclet';
     }
+
+    result = result.split(/\n/gu).map(l => {
+        l = l.trimEnd();
+        if (l.length > 80) {
+            const br = l.substring(0, 80).lastIndexOf(' ');
+            return l.substring(0, br) + '\n     * ' + l.substring(br);
+        }
+        return l;
+    }).join('\n');
 
     return `${result}\n     */\n    `;
 }
@@ -1035,7 +1053,6 @@ function putDocletsTree(
 
         if (verbose) {
             console.info('Applying', changes.length, 'change(s)...');
-            console.info(JSON.stringify(changes.map(c => c[2].fullName + ' ' + c[2].type), null, '  '));
         }
 
         let targetCode = target.getFullText();
