@@ -262,4 +262,4 @@ export default XRangeSeriesDefaults;
  * @apioption series.xrange.data.partialFill.fill
  */
 
-(''); // Keeps doclets above in JS file
+(''); // Keeps doclets above in JS file.
