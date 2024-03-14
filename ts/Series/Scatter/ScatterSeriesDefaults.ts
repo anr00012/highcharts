@@ -83,19 +83,23 @@ const ScatterSeriesDefaults: PlotOptionsOf<ScatterSeries> = {
      * @since 7.0.2
      */
     jitter: {
+
         /**
          * The maximal X offset for the random jitter effect.
          */
         x: 0,
+
         /**
          * The maximal Y offset for the random jitter effect.
          */
         y: 0
+
     },
 
     marker: {
 
         enabled: true // Overrides auto-enabling in line series (#3647)
+
     },
 
     /**
@@ -124,12 +128,15 @@ const ScatterSeriesDefaults: PlotOptionsOf<ScatterSeries> = {
      * @product highcharts highstock highmaps
      */
     tooltip: {
+
         /**
          * @product highcharts highstock
          */
         headerFormat: '<span style="color:{point.color}">\u25CF</span> ' +
             '<span style="font-size: 0.8em"> {series.name}</span><br/>',
+
         pointFormat: 'x: <b>{point.x}</b><br/>y: <b>{point.y}</b><br/>'
+
     }
 
 };
@@ -204,7 +211,7 @@ const ScatterSeriesDefaults: PlotOptionsOf<ScatterSeries> = {
  * @apioption series.scatter.data
  */
 
-''; // keeps doclets above in JS file
+''; // Keeps doclets above in JS file.
 
 /* *
  *

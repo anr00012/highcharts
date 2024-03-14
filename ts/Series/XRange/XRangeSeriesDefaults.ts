@@ -57,6 +57,7 @@ const {
  * @optionparent plotOptions.xrange
  */
 const XRangeSeriesDefaults: XRangeSeriesOptions = {
+
     /**
      * A partial fill for each point, typically used to visualize how much
      * of a task is performed. The partial fill object can be set either on
@@ -96,9 +97,11 @@ const XRangeSeriesDefaults: XRangeSeriesOptions = {
     colorByPoint: true,
 
     dataLabels: {
+
         formatter: function (): (string|undefined) {
-            let point = this.point as XRangePoint,
-                amount = point.partialFill;
+            const point = this.point as XRangePoint;
+
+            let amount = point.partialFill;
 
             if (isObject(amount)) {
                 amount = (amount as any).amount;
@@ -107,11 +110,17 @@ const XRangeSeriesDefaults: XRangeSeriesOptions = {
                 return correctFloat(amount * 100) + '%';
             }
         },
+
         inside: true,
+
         verticalAlign: 'middle',
+
         style: {
+
             whiteSpace: 'nowrap'
+
         }
+
     },
 
     tooltip: {
@@ -119,6 +128,7 @@ const XRangeSeriesDefaults: XRangeSeriesOptions = {
         headerFormat: '<span style="font-size: 0.8em">{point.x} - {point.x2}</span><br/>',
 
         pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.yCategory}</b><br/>'
+
     },
 
     borderRadius: 3,
@@ -252,4 +262,4 @@ export default XRangeSeriesDefaults;
  * @apioption series.xrange.data.partialFill.fill
  */
 
-(''); // adds doclets above to transpiled file
+(''); // Keeps doclets above in JS file
