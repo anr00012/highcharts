@@ -1227,7 +1227,7 @@ const defaultOptions: DefaultOptions = {
         labelFormatter: function (
             this: Legend.Item
         ): string {
-            /** eslint-enable valid-jsdoc */
+            // eslint-enable valid-jsdoc
             return this.name as any;
         },
 
@@ -1597,13 +1597,13 @@ const defaultOptions: DefaultOptions = {
             /**
              * @ignore
              */
-            width: '13px', // for IE precision
+            width: '13px', // For IE precision
             /**
              * @ignore
              */
             height: '13px'
         },
-        // itemWidth: undefined,
+        /// itemWidth: undefined,
 
         /**
          * When this is true, the legend symbol width will be the same as
@@ -1766,7 +1766,7 @@ const defaultOptions: DefaultOptions = {
          */
         verticalAlign: 'bottom',
 
-        // width: undefined,
+        // Width: undefined,
 
         /**
          * The x offset of the legend relative to its horizontal alignment
@@ -3033,4 +3033,4 @@ export default DefaultOptions;
  *         Return false to prevent the default action, usually zoom.
  */
 
-(''); // detach doclets above
+(''); // Detach doclets above
